@@ -38,7 +38,7 @@ customElements.define('simple-greeting', SimpleGreeting);
 
 ## Example
 
-See an example of SlimElement in action in [example/counter-button.js](https://github.com/hawkticehurst/slim-element/blob/main/example/counter-button.js).
+See an example of SlimElement in action in [example/simple-greeting.js](https://github.com/hawkticehurst/slim-element/blob/main/example/simple-greeting.js) or [example/counter-button.js](https://github.com/hawkticehurst/slim-element/blob/main/example/counter-button.js).
 
 ## License
 
