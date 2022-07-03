@@ -1,0 +1,9 @@
+{
+  "name": "slim-element",
+  "description": "A tiny base class for building web components.",
+  "version": "0.1.0",
+  "author": "Hawk Ticehurst <hawkticehurst@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "main": "index.js"
+}
