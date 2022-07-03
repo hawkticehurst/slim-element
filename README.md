@@ -6,8 +6,6 @@ It enables some super light abstractions over vanilla web component authoring ca
 
 ## Usage
 
-To try out this base class...
-
 ```bash
 npm install slim-element
 ```
