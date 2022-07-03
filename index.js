@@ -9,23 +9,25 @@ export class SlimElement extends HTMLElement {
   }
 
   _render() {
-    const markup = this.render();
-    const styles = this.constructor.styles;
-    const template = document.createElement('template');
+    if (!this.render) {
+      throw new Error('Web components extending SlimElement must implement a render method.');
+    }
 
-    if (this.shadow.adoptedStyleSheets !== undefined) {
+    const markup = this.render();
+    const styles = this.constructor.styles || '';
+    const template = document.createElement('template');
+    const useConstructableStyleSheets = this.shadow.adoptedStyleSheets !== undefined;
+
+    if (styles.length > 0 && useConstructableStyleSheets) {
       const sheet = new CSSStyleSheet();
       sheet.replaceSync(styles);
       this.shadow.adoptedStyleSheets = [sheet];
-      template.innerHTML = `${markup}`;
-    } else {
-      template.innerHTML = `
-        <style>
-          ${styles}
-        </style>
-        ${markup}
-      `;
     }
+    
+    template.innerHTML = `
+      ${styles.length > 0 && !useConstructableStyleSheets ? `<style>${styles}</style>` : ''}
+      ${markup}
+    `;
 
     this.shadow.appendChild(template.content.cloneNode(true));
   }
