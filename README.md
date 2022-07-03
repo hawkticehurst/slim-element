@@ -2,7 +2,7 @@
 
 A tiny base class for building web components.
 
-It enables some super light abstractions over vanilla web component authoring catered to my personal preferences.
+It enables some super light abstractions over vanilla web component authoring, catered to my personal preferences.
 
 ## Usage
 
