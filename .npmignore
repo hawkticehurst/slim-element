@@ -1,0 +1,40 @@
+# docs
+example/
+docs/
+samples/
+CODE_OF_CONDUCT.md
+SECURITY.md
+CONTRIBUTING.md
+
+# source code
+src/
+
+# tests
+*.spec.*
+coverage/
+
+# scripts
+scripts
+
+# config files
+.vscode
+.github
+.eslintrc.js
+.eslintrc
+.eslintignore
+.prettierrc
+.prettierignore
+babel.config.js
+tsconfig.json
+tsconfig.*.json
+webpack.config.js
+rollup.config.js
+api-extractor.json
+yarn.lock
+target
+package-lock.json
+*.node
+npm
+
+# cache
+temp
