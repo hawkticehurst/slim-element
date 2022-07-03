@@ -5,5 +5,13 @@
   "author": "Hawk Ticehurst <hawkticehurst@gmail.com>",
   "license": "MIT",
   "type": "module",
-  "main": "index.js"
+  "main": "index.js",
+  "homepage": "https://github.com/hawkticehurst/slim-element#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hawkticehurst/slim-element.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hawkticehurst/slim-element/issues"
+  }
 }
