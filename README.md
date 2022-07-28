@@ -14,18 +14,26 @@ npm install slim-element
 import { SlimElement } from 'slim-element';
 
 class SimpleGreeting extends SlimElement {
-  // Component styles can be optionally defined as a static property
-  // If constructable style sheets are supported they will be used
-  // otherwise the styles will be placed inside a <style> tag
+  // Component styles can be *optionally* defined as a static property
+  // If constructable style sheets are supported they will be used, otherwise 
+  // the styles will be placed in a <style> tag inside the shadow DOM
   static styles = `
     h1 { color: teal; }
   `;
 
-  // A constructor can be optionally defined
-  // If it is defined make sure the first line is a call to super()
+  // A constructor method can be *optionally* defined
+  // Calling super() will create and attach a shadow DOM
+  constructor() {
+    super();
+    // ... your custom component code ...
+  }
 
-  // A connectedCallback can be optionally defined
-  // If it is defined make sure the first line is a call to super.connectedCallback()
+  // A connectedCallback method can be *optionally* defined
+  // Calling super.connectedCallback() will handle rendering the component
+  connectedCallback() {
+    super.connectedCallback();
+    // ... your custom component code ...
+  }
 
   // A render method is required for defining component markup
   render() {
